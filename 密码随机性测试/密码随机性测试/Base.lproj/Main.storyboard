@@ -692,7 +692,7 @@
                                 <pathCell key="cell" controlSize="small" selectable="YES" editable="YES" alignment="left" id="oIC-pn-PxZ">
                                     <font key="font" metaFont="smallSystem"/>
                                     <url key="url" string="file://localhost/Applications/"/>
-                                    <color key="backgroundColor" red="0.8980392157" green="0.92549019610000005" blue="0.97254901959999995" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="backgroundColor" red="0.89803921568627454" green="0.92549019607843142" blue="0.97254901960784312" alpha="1" colorSpace="deviceRGB"/>
                                 </pathCell>
                             </pathControl>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PpZ-U1-lwh">
@@ -860,7 +860,7 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OZ7-3c-sx3">
                                 <rect key="frame" x="39" y="79" width="406" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="请选择文件！" id="jWx-G1-eAe">
+                                <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="等待开始测试" id="jWx-G1-eAe">
                                     <font key="font" size="15" name=".PingFangSC-Regular"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -876,6 +876,9 @@
                             </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="dragFilePathControl" destination="wMK-D6-Meu" id="wfv-Z6-peC"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

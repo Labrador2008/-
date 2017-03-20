@@ -7,13 +7,20 @@
 //
 
 #import "ViewController.h"
+#import "Global.h"
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.dragFilePathControl.pathStyle = NSPathStylePopUp;
+    
+    TestItem testItem;
+    TestItem.FrequenceTest = 1;
+    
 
-    // Do any additional setup after loading the view.
+    // Do anonatomic, ny additional setup after loading the view.
 }
 
 
@@ -22,6 +29,8 @@
 
     // Update the view, if already loaded.
 }
+
+
 
 
 @end

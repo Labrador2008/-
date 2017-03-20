@@ -12,6 +12,7 @@
 		6B58062E1E7CEBEE00E27A8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B58062D1E7CEBEE00E27A8A /* ViewController.m */; };
 		6B5806301E7CEBEE00E27A8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B58062F1E7CEBEE00E27A8A /* Assets.xcassets */; };
 		6B5806331E7CEBEE00E27A8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5806311E7CEBEE00E27A8A /* Main.storyboard */; };
+		6BD7DF051E801BD0007F84DB /* FileMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD7DF041E801BD0007F84DB /* FileMethod.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		6B58062F1E7CEBEE00E27A8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B5806321E7CEBEE00E27A8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6B5806341E7CEBEE00E27A8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BD7DF011E8015E7007F84DB /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		6BD7DF031E801BD0007F84DB /* FileMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileMethod.h; sourceTree = "<group>"; };
+		6BD7DF041E801BD0007F84DB /* FileMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileMethod.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +60,8 @@
 		6B5806251E7CEBEE00E27A8A /* 密码随机性测试 */ = {
 			isa = PBXGroup;
 			children = (
-				6B5806261E7CEBEE00E27A8A /* AppDelegate.h */,
-				6B5806271E7CEBEE00E27A8A /* AppDelegate.m */,
+				6BD7DF021E801B22007F84DB /* Method */,
+				6BD7DF011E8015E7007F84DB /* Global.h */,
 				6B58062C1E7CEBEE00E27A8A /* ViewController.h */,
 				6B58062D1E7CEBEE00E27A8A /* ViewController.m */,
 				6B58062F1E7CEBEE00E27A8A /* Assets.xcassets */,
@@ -71,9 +75,20 @@
 		6B5806291E7CEBEE00E27A8A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6B5806261E7CEBEE00E27A8A /* AppDelegate.h */,
+				6B5806271E7CEBEE00E27A8A /* AppDelegate.m */,
 				6B58062A1E7CEBEE00E27A8A /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6BD7DF021E801B22007F84DB /* Method */ = {
+			isa = PBXGroup;
+			children = (
+				6BD7DF031E801BD0007F84DB /* FileMethod.h */,
+				6BD7DF041E801BD0007F84DB /* FileMethod.m */,
+			);
+			name = Method;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BD7DF051E801BD0007F84DB /* FileMethod.m in Sources */,
 				6B58062E1E7CEBEE00E27A8A /* ViewController.m in Sources */,
 				6B58062B1E7CEBEE00E27A8A /* main.m in Sources */,
 				6B5806281E7CEBEE00E27A8A /* AppDelegate.m in Sources */,
@@ -296,6 +312,7 @@
 				6B5806391E7CEBEE00E27A8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

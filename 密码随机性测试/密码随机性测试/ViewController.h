@@ -10,6 +10,14 @@
 
 @interface ViewController : NSViewController
 
+//存储待测试文件的路径
+@property (strong, nonatomic) NSString *testFilePath;
+//文件路径选择控件
+@property (weak) IBOutlet NSPathControl *dragFilePathControl;
+
+//记录要测试的条目
+@property (strong, nonatomic) NSMutableArray *selectedItemAry;
+
 
 @end
 
