@@ -702,6 +702,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" size="11" name=".PingFangSC-Regular"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="selectedItem:" target="XfG-lQ-9wD" id="WUF-Tv-ME8"/>
+                                </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lwP-Af-Tfr">
                                 <rect key="frame" x="176" y="204" width="88" height="20"/>
@@ -710,6 +713,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" size="11" name=".PingFangSC-Regular"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="selectedItem:" target="XfG-lQ-9wD" id="aqY-HX-NMg"/>
+                                </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xc0-qt-uBM">
                                 <rect key="frame" x="321" y="204" width="77" height="20"/>
@@ -718,6 +724,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" size="11" name=".PingFangSC-Regular"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="selectedItem:" target="XfG-lQ-9wD" id="bOc-Wv-hvF"/>
+                                </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="07d-WI-I9L">
                                 <rect key="frame" x="602" y="204" width="110" height="20"/>
@@ -726,6 +735,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" size="11" name=".PingFangSC-Regular"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="selectedItem:" target="XfG-lQ-9wD" id="qLA-r6-e7f"/>
+                                </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ClW-So-Scf">
                                 <rect key="frame" x="467" y="204" width="66" height="20"/>
@@ -734,6 +746,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" size="11" name=".PingFangSC-Regular"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="selectedItem:" target="XfG-lQ-9wD" id="ZV5-2Z-il2"/>
+                                </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="04i-gY-8ee">
                                 <rect key="frame" x="38" y="168" width="66" height="20"/>
@@ -742,6 +757,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" size="11" name=".PingFangSC-Regular"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="selectedItem:" target="XfG-lQ-9wD" id="EP4-3P-7di"/>
+                                </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f67-S2-s61">
                                 <rect key="frame" x="176" y="168" width="77" height="20"/>
@@ -750,6 +768,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" size="11" name=".PingFangSC-Regular"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="selectedItem:" target="XfG-lQ-9wD" id="njv-st-bv3"/>
+                                </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QcF-Xp-7ET">
                                 <rect key="frame" x="321" y="168" width="66" height="20"/>
@@ -758,6 +779,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" size="11" name=".PingFangSC-Regular"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="selectedItem:" target="XfG-lQ-9wD" id="7ye-5Y-dPe"/>
+                                </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s20-Ni-B1y">
                                 <rect key="frame" x="602" y="168" width="121" height="20"/>
@@ -766,6 +790,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" size="11" name=".PingFangSC-Regular"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="selectedItem:" target="XfG-lQ-9wD" id="sU4-ji-wxO"/>
+                                </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2tk-0p-b4a">
                                 <rect key="frame" x="467" y="168" width="110" height="20"/>
@@ -774,6 +801,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" size="11" name=".PingFangSC-Regular"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="selectedItem:" target="XfG-lQ-9wD" id="lSa-vB-Z6g"/>
+                                </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2v5-ra-cpJ">
                                 <rect key="frame" x="38" y="134" width="99" height="20"/>
@@ -782,6 +812,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" size="11" name=".PingFangSC-Regular"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="selectedItem:" target="XfG-lQ-9wD" id="xf3-LJ-bZ5"/>
+                                </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pdr-SF-AHy">
                                 <rect key="frame" x="176" y="134" width="99" height="20"/>
@@ -790,6 +823,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" size="11" name=".PingFangSC-Regular"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="selectedItem:" target="XfG-lQ-9wD" id="c0t-P8-FXu"/>
+                                </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zy1-E9-j2p">
                                 <rect key="frame" x="321" y="134" width="88" height="20"/>
@@ -798,6 +834,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" size="11" name=".PingFangSC-Regular"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="selectedItem:" target="XfG-lQ-9wD" id="Vmo-cb-vuD"/>
+                                </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q3N-T4-MGn">
                                 <rect key="frame" x="602" y="134" width="110" height="20"/>
@@ -806,6 +845,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" size="11" name=".PingFangSC-Regular"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="selectedItem:" target="XfG-lQ-9wD" id="YGE-tx-EF3"/>
+                                </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="06C-5S-Gaf">
                                 <rect key="frame" x="467" y="134" width="121" height="20"/>
@@ -814,6 +856,9 @@
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" size="11" name=".PingFangSC-Regular"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="selectedItem:" target="XfG-lQ-9wD" id="wDU-Xs-SDB"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zHc-1D-rZL">
                                 <rect key="frame" x="454" y="26" width="80" height="17"/>
@@ -821,14 +866,9 @@
                                 <buttonCell key="cell" type="roundRect" title="开始测试" bezelStyle="roundedRect" alignment="center" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="oMH-Uh-eLB">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="11" name=".PingFangSC-Regular"/>
-                                </buttonCell>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OI7-u3-lVF">
-                                <rect key="frame" x="454" y="248" width="80" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="roundRect" title="全选" bezelStyle="roundedRect" alignment="center" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Fx5-lc-JGM">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" size="11" name=".PingFangSC-Regular"/>
+                                    <connections>
+                                        <action selector="startTest:" target="XfG-lQ-9wD" id="sO1-lG-mG9"/>
+                                    </connections>
                                 </buttonCell>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qGm-aH-zgs">
@@ -837,6 +877,9 @@
                                 <buttonCell key="cell" type="roundRect" title="查看结果" bezelStyle="roundedRect" alignment="center" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Uyh-jt-tdH">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="11" name=".PingFangSC-Regular"/>
+                                    <connections>
+                                        <action selector="showResults:" target="XfG-lQ-9wD" id="xb8-OS-10l"/>
+                                    </connections>
                                 </buttonCell>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PAx-ah-Szg">
@@ -866,17 +909,36 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZqK-yc-hGZ">
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OI7-u3-lVF">
                                 <rect key="frame" x="582" y="248" width="80" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="roundRect" title="全不选" bezelStyle="roundedRect" alignment="center" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZfS-WB-XVS">
+                                <buttonCell key="cell" type="roundRect" title="全不选" bezelStyle="roundedRect" alignment="center" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Fx5-lc-JGM">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" size="11" name=".PingFangSC-Regular"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="clickAllItem:" target="XfG-lQ-9wD" id="gVN-aM-Uci"/>
+                                </connections>
                             </button>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="ApproximateEntropyBtn" destination="f67-S2-s61" id="1Dp-Nl-gay"/>
+                        <outlet property="BlockFrequencyBtn" destination="lwP-Af-Tfr" id="8KI-3r-ECC"/>
+                        <outlet property="CumulativeSumsBtn" destination="xc0-qt-uBM" id="IAg-7M-itZ"/>
+                        <outlet property="DFTBtn" destination="06C-5S-Gaf" id="VxG-Fw-gDj"/>
+                        <outlet property="FrequencyBtn" destination="PpZ-U1-lwh" id="3xX-gN-lKO"/>
+                        <outlet property="LinearComplexityBtn" destination="pdr-SF-AHy" id="03X-dC-KMY"/>
+                        <outlet property="LongestRunBtn" destination="07d-WI-I9L" id="XcS-G9-s3E"/>
+                        <outlet property="NonOverlappingTemplateMatchingBtn" destination="s20-Ni-B1y" id="d9W-6c-fIg"/>
+                        <outlet property="OverlappingTemplateMatchingBtn" destination="2tk-0p-b4a" id="AJx-MS-TP7"/>
+                        <outlet property="RandomExcursionVariantBtn" destination="Q3N-T4-MGn" id="ZFq-2q-cOZ"/>
+                        <outlet property="RandomExcursionsBtn" destination="zy1-E9-j2p" id="Hhk-PI-twp"/>
+                        <outlet property="RanksBtn" destination="2v5-ra-cpJ" id="NMt-PE-LZA"/>
+                        <outlet property="RunsBtn" destination="ClW-So-Scf" id="rJM-Qi-aO3"/>
+                        <outlet property="SerialBtn" destination="04i-gY-8ee" id="mGU-ro-6mw"/>
+                        <outlet property="UniversalStaticalBtn" destination="QcF-Xp-7ET" id="bLT-8b-W0L"/>
+                        <outlet property="allItemBtn" destination="OI7-u3-lVF" id="pFQ-ps-5Ru"/>
                         <outlet property="dragFilePathControl" destination="wMK-D6-Meu" id="wfv-Z6-peC"/>
                     </connections>
                 </viewController>

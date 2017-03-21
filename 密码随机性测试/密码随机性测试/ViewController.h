@@ -9,6 +9,9 @@
 #import <Cocoa/Cocoa.h>
 
 @interface ViewController : NSViewController
+{
+    int clickSelecteAllBtnTime;
+}
 
 //存储待测试文件的路径
 @property (strong, nonatomic) NSString *testFilePath;
@@ -17,6 +20,28 @@
 
 //记录要测试的条目
 @property (strong, nonatomic) NSMutableArray *selectedItemAry;
+
+//存储所有测试条目的数组
+@property (strong, nonatomic) NSArray *allBtnAry;
+
+@property (weak) IBOutlet NSButton *FrequencyBtn;
+@property (weak) IBOutlet NSButton *BlockFrequencyBtn;
+@property (weak) IBOutlet NSButton *CumulativeSumsBtn;
+@property (weak) IBOutlet NSButton *RunsBtn;
+@property (weak) IBOutlet NSButton *LongestRunBtn;
+@property (weak) IBOutlet NSButton *SerialBtn;
+@property (weak) IBOutlet NSButton *ApproximateEntropyBtn;
+@property (weak) IBOutlet NSButton *UniversalStaticalBtn;
+@property (weak) IBOutlet NSButton *OverlappingTemplateMatchingBtn;
+@property (weak) IBOutlet NSButton *NonOverlappingTemplateMatchingBtn;
+@property (weak) IBOutlet NSButton *RanksBtn;
+@property (weak) IBOutlet NSButton *LinearComplexityBtn;
+@property (weak) IBOutlet NSButton *RandomExcursionsBtn;
+@property (weak) IBOutlet NSButton *DFTBtn;
+@property (weak) IBOutlet NSButton *RandomExcursionVariantBtn;
+
+
+@property (weak) IBOutlet NSButton *allItemBtn;
 
 
 @end
