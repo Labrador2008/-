@@ -917,7 +917,18 @@
                                     <font key="font" size="11" name=".PingFangSC-Regular"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="clickAllItem:" target="XfG-lQ-9wD" id="gVN-aM-Uci"/>
+                                    <action selector="selectedNoItem:" target="XfG-lQ-9wD" id="O70-3o-cjP"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Lb-0i-1OJ">
+                                <rect key="frame" x="454" y="248" width="80" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="roundRect" title="全选" bezelStyle="roundedRect" alignment="center" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZYy-9Y-pU8">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="11" name=".PingFangSC-Regular"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="selectedAllItem:" target="XfG-lQ-9wD" id="VtL-lr-Gfo"/>
                                 </connections>
                             </button>
                         </subviews>

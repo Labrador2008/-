@@ -39,15 +39,6 @@
         }
     }
     
-    if (_selectedItemAry.count > 14)
-    {
-        [self.allItemBtn setTitle:@"全不选"];
-    }
-    else
-    {
-        
-        [self.allItemBtn setTitle:@"全选"];
-    }
     return _selectedItemAry;
 }
 
@@ -58,8 +49,7 @@
     //设置NSPathControl的格式；  
     self.dragFilePathControl.pathStyle = NSPathStylePopUp;
     
-<<<<<<< HEAD
-=======
+
     //设置item btn的tag；
     self.FrequencyBtn.tag = 1;
     self.BlockFrequencyBtn.tag = 2;
@@ -80,7 +70,7 @@
     //设置全选按钮点击的次数，从0开始；
     clickSelecteAllBtnTime = 0;
     
->>>>>>> Mac_Home
+
     
 
     // Do anonatomic, ny additional setup after loading the view.
@@ -105,7 +95,8 @@
     
 }
 
-- (IBAction)clickAllItem:(NSButton *)sender
+//相应 全选 按钮
+- (IBAction)selectedAllItem:(NSButton *)sender
 {
     
     //把Btn的状态标记为选中。
@@ -128,11 +119,79 @@
     DLog(@"selecteTestItemAry is %@", self.selectedItemAry);
 
 }
-- (IBAction)startTest:(id)sender
+
+//相应 全不选 按钮
+- (IBAction)selectedNoItem:(id)sender
 {
+    for (NSButton *btn in self.allBtnAry)
+    {
+        btn.state = 0;
+    }
+//    [self setRepresentedObject:self.allBtnAry];
+    
+    //删除说有的数组
+    [self.selectedItemAry removeAllObjects];
     
 }
-- (IBAction)showResults:(id)sender {
+
+
+//开始测试
+- (IBAction)startTest:(id)sender
+{
+    //判断测试条目数组中的内容是否正确
+    if (!self.selectedItemAry || self.selectedItemAry.count == 0)
+    {
+        DLog(@"test item wrong");
+        //弹窗
+    }
+    
+    self.testFilePath = [self.dragFilePathControl.URL absoluteString];
+    
+    DLog(@"test file path : %@", self.testFilePath);
+    
+    //判断待测试文件路径是否正确
+    if (!self.testFilePath)
+    {
+        DLog(@"test file path wrong");
+        //弹窗
+    }
+    
+    //依次计算每段的数据的随机性
+    for (int n = 0; n < FILE_PART_COUNT; n++)
+    {
+    
+        //获取第n段要测试的数据
+        NSData *mTestData = [FileMethod divisionFileWithPath:_testFilePath];
+        
+        if (!mTestData)
+        {
+            DLog(@"test data wrong");
+            //弹窗
+        }
+        
+        //循环测试 测试条目数组 中的所有内容
+        for (int i = 0; i < self.selectedItemAry.count; i++)
+        {
+            //获取数组中的条目
+            NSNumber *mTestItemNum = [self.selectedItemAry objectAtIndex:i];
+            BOOL isOK = [CalculatorMethod startCalculatorWithData:mTestData andItmeNum:mTestItemNum];
+            
+            if (isOK)
+            {
+                DLog(@"calculator wrong");
+                //弹窗
+                
+                break;
+            }
+        }
+    
+    }
+}
+
+//显示测试的结果
+- (IBAction)showResults:(id)sender
+{
+    
 }
 
 

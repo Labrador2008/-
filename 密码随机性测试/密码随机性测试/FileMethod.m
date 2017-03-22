@@ -34,4 +34,14 @@
     return partData;
 }
 
++ (FileMethod *)sharedInstance
+{
+        static dispatch_once_t onceToken;
+        static FileMethod * sSharedInstance;
+        dispatch_once(&onceToken,^{
+            sSharedInstance = [[FileMethod alloc] init];
+        });
+        return sSharedInstance;
+}
+
 @end

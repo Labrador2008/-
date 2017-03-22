@@ -9,6 +9,9 @@
 #ifndef Global_h
 #define Global_h
 
+#import "FileMethod.h"
+#import "CalculatorMethod.h"
+
 
 #pragma mark - Foundation
 //单次测试传入的数据长度

@@ -22,4 +22,7 @@
  */
 + (NSData *)divisionFileWithPath:(NSString *)path;
 
+
++ (FileMethod *)sharedInstance;
+
 @end

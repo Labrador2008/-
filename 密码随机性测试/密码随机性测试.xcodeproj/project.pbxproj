@@ -13,6 +13,7 @@
 		6B5806301E7CEBEE00E27A8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B58062F1E7CEBEE00E27A8A /* Assets.xcassets */; };
 		6B5806331E7CEBEE00E27A8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5806311E7CEBEE00E27A8A /* Main.storyboard */; };
 		6BD7DF051E801BD0007F84DB /* FileMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD7DF041E801BD0007F84DB /* FileMethod.m */; };
+		751B711F1E82608B00093261 /* CalculatorMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 751B711E1E82608B00093261 /* CalculatorMethod.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		6BD7DF011E8015E7007F84DB /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		6BD7DF031E801BD0007F84DB /* FileMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileMethod.h; sourceTree = "<group>"; };
 		6BD7DF041E801BD0007F84DB /* FileMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileMethod.m; sourceTree = "<group>"; };
+		751B711D1E82608B00093261 /* CalculatorMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorMethod.h; sourceTree = "<group>"; };
+		751B711E1E82608B00093261 /* CalculatorMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorMethod.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,8 @@
 			children = (
 				6BD7DF031E801BD0007F84DB /* FileMethod.h */,
 				6BD7DF041E801BD0007F84DB /* FileMethod.m */,
+				751B711D1E82608B00093261 /* CalculatorMethod.h */,
+				751B711E1E82608B00093261 /* CalculatorMethod.m */,
 			);
 			name = Method;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 				6BD7DF051E801BD0007F84DB /* FileMethod.m in Sources */,
 				6B58062E1E7CEBEE00E27A8A /* ViewController.m in Sources */,
 				6B58062B1E7CEBEE00E27A8A /* main.m in Sources */,
+				751B711F1E82608B00093261 /* CalculatorMethod.m in Sources */,
 				6B5806281E7CEBEE00E27A8A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
