@@ -60,8 +60,8 @@
 		6B5806251E7CEBEE00E27A8A /* 密码随机性测试 */ = {
 			isa = PBXGroup;
 			children = (
+				759C42771E80AA01001112ED /* Global */,
 				6BD7DF021E801B22007F84DB /* Method */,
-				6BD7DF011E8015E7007F84DB /* Global.h */,
 				6B58062C1E7CEBEE00E27A8A /* ViewController.h */,
 				6B58062D1E7CEBEE00E27A8A /* ViewController.m */,
 				6B58062F1E7CEBEE00E27A8A /* Assets.xcassets */,
@@ -89,6 +89,14 @@
 				6BD7DF041E801BD0007F84DB /* FileMethod.m */,
 			);
 			name = Method;
+			sourceTree = "<group>";
+		};
+		759C42771E80AA01001112ED /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				6BD7DF011E8015E7007F84DB /* Global.h */,
+			);
+			name = Global;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -16,8 +16,6 @@
     
     self.dragFilePathControl.pathStyle = NSPathStylePopUp;
     
-    TestItem testItem;
-    TestItem.FrequenceTest = 1;
     
 
     // Do anonatomic, ny additional setup after loading the view.
