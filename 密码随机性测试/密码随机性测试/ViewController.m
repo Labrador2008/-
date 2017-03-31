@@ -104,7 +104,7 @@
     {
         btn.state = 1;
     }
-    [self setRepresentedObject:self.allBtnAry];
+    //[self setRepresentedObject:self.allBtnAry];
     
     //清除之前的所有内容；
     [self.selectedItemAry removeAllObjects];
@@ -145,23 +145,25 @@
         //弹窗
     }
     
-    self.testFilePath = [self.dragFilePathControl.URL absoluteString];
+    self.testFileURL = self.dragFilePathControl.URL;
     
-    DLog(@"test file path : %@", self.testFilePath);
+    DLog(@"test file URL : %@", self.testFileURL);
     
     //判断待测试文件路径是否正确
-    if (!self.testFilePath)
+    if (!self.testFileURL)
     {
         DLog(@"test file path wrong");
         //弹窗
     }
     
     //依次计算每段的数据的随机性
-    for (int n = 0; n < FILE_PART_COUNT; n++)
+    //FILE_PART_COUNT
+    for (int n = 0; n < 1; n++)
     {
     
         //获取第n段要测试的数据
-        NSData *mTestData = [FileMethod divisionFileWithPath:_testFilePath];
+        NSData *mTestData = [FileMethod divisionFileWithPath:self.testFileURL];
+        DLog(@"test data length: %lu", (unsigned long)mTestData.length);
         
         if (!mTestData)
         {
@@ -183,9 +185,21 @@
                 
                 break;
             }
+            
+            
+            //更新显示的状态栏
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.stateLabel.stringValue = [NSString stringWithFormat:@"第%d个数据块，第%d个测试条目", n, i+1];
+                
+             
+                
+                
+            });
         }
     
     }
+    
+    DLog(@"test finish");
 }
 
 //显示测试的结果
