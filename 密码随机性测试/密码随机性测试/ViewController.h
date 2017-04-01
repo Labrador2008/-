@@ -14,7 +14,7 @@
 }
 
 //存储待测试文件的路径
-@property (strong, nonatomic) NSString *testFilePath;
+@property (strong, nonatomic) NSURL *testFileURL;
 //文件路径选择控件
 @property (weak) IBOutlet NSPathControl *dragFilePathControl;
 
@@ -23,7 +23,11 @@
 
 //存储所有测试条目的数组
 @property (strong, nonatomic) NSArray *allBtnAry;
+//存储所有的btn
+@property (weak) IBOutlet NSButton *allItemBtn;
 
+
+//测试条目btn
 @property (weak) IBOutlet NSButton *FrequencyBtn;
 @property (weak) IBOutlet NSButton *BlockFrequencyBtn;
 @property (weak) IBOutlet NSButton *CumulativeSumsBtn;
@@ -40,8 +44,10 @@
 @property (weak) IBOutlet NSButton *DFTBtn;
 @property (weak) IBOutlet NSButton *RandomExcursionVariantBtn;
 
+//状态栏
+@property (weak) IBOutlet NSTextField *stateLabel;
 
-@property (weak) IBOutlet NSButton *allItemBtn;
+
 
 
 @end

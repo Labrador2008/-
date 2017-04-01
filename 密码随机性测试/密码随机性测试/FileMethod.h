@@ -20,6 +20,9 @@
  返回值
     截取后的数据；
  */
-+ (NSData *)divisionFileWithPath:(NSString *)path;
++ (NSData *)divisionFileWithPath:(NSURL *)url;
+
+
++ (FileMethod *)sharedInstance;
 
 @end

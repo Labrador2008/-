@@ -10,12 +10,12 @@
 
 @implementation FileMethod
 
-+ (NSData *)divisionFileWithPath:(NSString *)path
++ (NSData *)divisionFileWithPath:(NSURL *)url
 {
-    DLog(@"devied File With Path: %@", path);
+    DLog(@"devied File With Path: %@", url);
     
     //获取要处理的文件数据
-    NSData *fileData = [NSData dataWithContentsOfFile:path];
+    NSData *fileData = [NSData dataWithContentsOfURL:url];
     
     if (fileData == nil || fileData.length < PART_FILE_DATA_LENGTH)
     {
@@ -32,6 +32,16 @@
     NSData *partData = [fileData subdataWithRange:NSMakeRange(startPos, PART_FILE_DATA_LENGTH)];
     
     return partData;
+}
+
++ (FileMethod *)sharedInstance
+{
+        static dispatch_once_t onceToken;
+        static FileMethod * sSharedInstance;
+        dispatch_once(&onceToken,^{
+            sSharedInstance = [[FileMethod alloc] init];
+        });
+        return sSharedInstance;
 }
 
 @end
