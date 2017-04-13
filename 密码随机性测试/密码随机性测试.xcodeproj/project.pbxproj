@@ -14,6 +14,7 @@
 		6B5806331E7CEBEE00E27A8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5806311E7CEBEE00E27A8A /* Main.storyboard */; };
 		6BD7DF051E801BD0007F84DB /* FileMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD7DF041E801BD0007F84DB /* FileMethod.m */; };
 		751B711F1E82608B00093261 /* CalculatorMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 751B711E1E82608B00093261 /* CalculatorMethod.m */; };
+		75A4CD161E9F4EC5001A2699 /* cephes.c in Sources */ = {isa = PBXBuildFile; fileRef = 75A4CD151E9F4EC5001A2699 /* cephes.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,16 @@
 		6BD7DF041E801BD0007F84DB /* FileMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileMethod.m; sourceTree = "<group>"; };
 		751B711D1E82608B00093261 /* CalculatorMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorMethod.h; sourceTree = "<group>"; };
 		751B711E1E82608B00093261 /* CalculatorMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorMethod.m; sourceTree = "<group>"; };
+		75A4CD151E9F4EC5001A2699 /* cephes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cephes.c; path = src/cephes.c; sourceTree = "<group>"; };
+		75A7B1321E9F01400098B191 /* cephes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cephes.h; sourceTree = "<group>"; };
+		75A7B1331E9F01400098B191 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		75A7B1341E9F01400098B191 /* decls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = decls.h; sourceTree = "<group>"; };
+		75A7B1351E9F01400098B191 /* defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = defs.h; sourceTree = "<group>"; };
+		75A7B1361E9F01400098B191 /* externs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = externs.h; sourceTree = "<group>"; };
+		75A7B1381E9F01400098B191 /* genutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = genutils.h; sourceTree = "<group>"; };
+		75A7B1391E9F01400098B191 /* matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matrix.h; sourceTree = "<group>"; };
+		75A7B13A1E9F01400098B191 /* stat_fncs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stat_fncs.h; sourceTree = "<group>"; };
+		75A7B13B1E9F01400098B191 /* utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utilities.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +74,7 @@
 		6B5806251E7CEBEE00E27A8A /* 密码随机性测试 */ = {
 			isa = PBXGroup;
 			children = (
+				75A7B1301E9F01400098B191 /* Maths */,
 				759C42771E80AA01001112ED /* Global */,
 				6BD7DF021E801B22007F84DB /* Method */,
 				6B58062C1E7CEBEE00E27A8A /* ViewController.h */,
@@ -102,6 +114,39 @@
 				6BD7DF011E8015E7007F84DB /* Global.h */,
 			);
 			name = Global;
+			sourceTree = "<group>";
+		};
+		75A4CD141E9F4E98001A2699 /* foundation */ = {
+			isa = PBXGroup;
+			children = (
+				75A4CD151E9F4EC5001A2699 /* cephes.c */,
+			);
+			name = foundation;
+			sourceTree = "<group>";
+		};
+		75A7B1301E9F01400098B191 /* Maths */ = {
+			isa = PBXGroup;
+			children = (
+				75A4CD141E9F4E98001A2699 /* foundation */,
+				75A7B1311E9F01400098B191 /* include */,
+			);
+			path = Maths;
+			sourceTree = SOURCE_ROOT;
+		};
+		75A7B1311E9F01400098B191 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				75A7B1321E9F01400098B191 /* cephes.h */,
+				75A7B1331E9F01400098B191 /* config.h */,
+				75A7B1341E9F01400098B191 /* decls.h */,
+				75A7B1351E9F01400098B191 /* defs.h */,
+				75A7B1361E9F01400098B191 /* externs.h */,
+				75A7B1381E9F01400098B191 /* genutils.h */,
+				75A7B1391E9F01400098B191 /* matrix.h */,
+				75A7B13A1E9F01400098B191 /* stat_fncs.h */,
+				75A7B13B1E9F01400098B191 /* utilities.h */,
+			);
+			path = include;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +222,7 @@
 				6BD7DF051E801BD0007F84DB /* FileMethod.m in Sources */,
 				6B58062E1E7CEBEE00E27A8A /* ViewController.m in Sources */,
 				6B58062B1E7CEBEE00E27A8A /* main.m in Sources */,
+				75A4CD161E9F4EC5001A2699 /* cephes.c in Sources */,
 				751B711F1E82608B00093261 /* CalculatorMethod.m in Sources */,
 				6B5806281E7CEBEE00E27A8A /* AppDelegate.m in Sources */,
 			);

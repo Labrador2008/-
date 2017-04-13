@@ -15,9 +15,10 @@
     DLog(@"devied File With Path: %@", url);
     
     //获取要处理的文件数据
+    
     NSData *fileData = [NSData dataWithContentsOfURL:url];
     
-    if (fileData == nil || fileData.length < PART_FILE_DATA_LENGTH)
+    if (fileData == nil || fileData.length < PART_FILE_DATA_LENGTH /8)
     {
         DLog(@"There is something Wrong With File");
     }
@@ -25,11 +26,15 @@
     //对文件进行分割。
     NSUInteger fileDataLength = [fileData length];
     
-    NSUInteger startScope = fileDataLength - PART_FILE_DATA_LENGTH;
+    NSUInteger startScope = fileDataLength - PART_FILE_DATA_LENGTH/8;
     
     NSUInteger startPos = arc4random() % startScope ;
     
-    NSData *partData = [fileData subdataWithRange:NSMakeRange(startPos, PART_FILE_DATA_LENGTH)];
+    NSData *partData = [fileData subdataWithRange:NSMakeRange(startPos, PART_FILE_DATA_LENGTH/8)];
+    
+    [partData writeToFile:@"/Users/LBLD/Desktop/00.pi" atomically:YES];
+    
+    epsilon = (unsigned char *)[partData bytes];
     
     return partData;
 }

@@ -166,12 +166,14 @@
             return;
         }
         
+        epsilon = (unsigned char *)[mTestData bytes];
         //循环测试 测试条目数组 中的所有内容
         for (int i = 0; i < self.selectedItemAry.count; i++)
         {
             //获取数组中的条目
             NSNumber *mTestItemNum = [self.selectedItemAry objectAtIndex:i];
-            BOOL isOK = [CalculatorMethod startCalculatorWithData:mTestData andItemNum:mTestItemNum];
+            CalculatorMethod *test = [[CalculatorMethod alloc] init];
+            BOOL isOK = [test startCalculatorWithData:mTestData andItemNum:mTestItemNum];
             
             if (!isOK)
             {
