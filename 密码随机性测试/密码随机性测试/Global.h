@@ -55,4 +55,20 @@ typedef NS_ENUM(NSInteger, TestItem)
     
 };
 
+#define FREQUENCY_TEST                  1
+#define BLOCKFREQUENCY_TEST             2
+#define CUMULATIVESUM_TEST              3
+#define RUNS_TEST                       4
+#define LONGERSRUN_TEST                 5
+#define SERIAL_TEST                     6
+#define APPROXIMATEENTROPY_TEST         7
+#define UNIVERSALSTATICAL_TEST          8
+#define OVERLAPPINGTEMPLATEMATCHING_TEST    9
+#define NONOVERLAPPINGTEMPLATEMATCHING_TEST 10
+#define RANKS_TEST                          11
+#define LINEARCOMPLEXITY_TEST               12
+#define RANDOMEXCURSIONS_TEST               13
+#define DFT_TEST                            14  
+#define RANDOMEXCURSIONVARIANT_TEST         15
+
 #endif /* Global_h */
