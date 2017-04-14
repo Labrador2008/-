@@ -166,7 +166,7 @@
             return;
         }
         
-        epsilon = (unsigned char *)[mTestData bytes];
+        //epsilon = (unsigned char *)[mTestData bytes];
         //循环测试 测试条目数组 中的所有内容
         for (int i = 0; i < self.selectedItemAry.count; i++)
         {
@@ -175,7 +175,7 @@
             CalculatorMethod *test = [[CalculatorMethod alloc] init];
             BOOL isOK = [test startCalculatorWithData:mTestData andItemNum:mTestItemNum];
             
-            if (!isOK)
+            if (isOK)
             {
                 DLog(@"calculator wrong");
                 //弹窗
