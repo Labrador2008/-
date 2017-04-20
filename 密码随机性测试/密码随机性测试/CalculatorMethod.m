@@ -677,6 +677,14 @@ unsigned char *epsilon;
         }
         [myMethod.allResDic setObject:bloRes forKey:@"BLOCKFREQUENCY_TEST"];
         DLog(@"res: %@",myMethod.allResDic);
+        
+        //判断结果是否大雨0.01；
+        float resblo = [bloRes floatValue];
+        if (resblo > 0.01)
+        {
+            DLog(@"block frequency pass");
+            myMethod.timeOfBlockFrequencyTest++;
+        }
     }
     else if(testItemNum == CUMULATIVESUM_TEST)
     {
@@ -689,6 +697,15 @@ unsigned char *epsilon;
         }
         [myMethod.allResDic setObject:cusumAry forKey:@"CUMULATIVESUM_TEST"];
         DLog(@"res: %@",myMethod.allResDic);
+        NSString *cusumStr1 = [cusumAry objectAtIndex:0];
+        NSString *cusumStr2 = [cusumAry objectAtIndex:1];
+        float resCusum1 = [cusumStr1 floatValue];
+        float resCusum2 = [cusumStr2 floatValue];
+        if (resCusum1 > 0.01 && resCusum2 > 0.01)
+        {
+            DLog(@"cumulative sum pass");
+            myMethod.timeOfCumulativeSumsTest++;
+        }
         
     }
     else if(testItemNum == RUNS_TEST)

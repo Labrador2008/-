@@ -33,7 +33,15 @@
 @property (nonatomic) NSUInteger timeOfBinaryMatrixRankTest;
 @property (nonatomic) NSUInteger timeOfDiscreteFourierTransformTest;
 @property (nonatomic) NSUInteger timeOfNonOverlappingTemplateMatchingTest;
-@property (nonatomic) NSUInteger timeOfN
+@property (nonatomic) NSUInteger timeOfOverlappingTemplateMatchingTest;
+@property (nonatomic) NSUInteger timeOfUniversalStaticticalTest;
+@property (nonatomic) NSUInteger timeOfLinearComplexityTest;
+@property (nonatomic) NSUInteger timeOfSerialTest;
+@property (nonatomic) NSUInteger timeOfApproximateEntropyTest;
+@property (nonatomic) NSUInteger timeOfCumulativeSumsTest;
+@property (nonatomic) NSUInteger timeOfRandomExcursionsTest;
+@property (nonatomic) NSUInteger timeOfRandomExcursionsVariantTest;
+
 
 
 @end
