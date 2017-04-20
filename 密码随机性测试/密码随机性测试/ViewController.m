@@ -152,7 +152,10 @@
    
     //依次计算每段的数据的随机性
     //FILE_PART_COUNT
-    for (int n = 0; n < 1; n++)
+    
+    CalculatorMethod * method = [CalculatorMethod sharedInstance];
+    method.allResDic = [[NSMutableDictionary alloc] initWithCapacity:(FILE_PART_COUNT * self.selectedItemAry.count)];
+    for (int n = 0; n < 2; n++)
     {
     
         //获取第n段要测试的数据
@@ -186,15 +189,22 @@
             
             //更新显示的状态栏
             dispatch_async(dispatch_get_main_queue(), ^{
-                self.stateLabel.stringValue = [NSString stringWithFormat:@"第%d个数据块，第%d个测试条目", n, i+1];
+                self.stateLabel.stringValue = [NSString stringWithFormat:@"第%d个数据块，第%d个测试条目", n+1, i+1];
                 
              
                 
                 
             });
         }
-    
+        
+        free(epsilon);
+        NSString *resPathStr = [NSString stringWithFormat:@"/Users/LBLD/Desktop/tmp/res_%d.plist",n+1];
+        int res = [method.allResDic writeToFile:resPathStr atomically:YES];
+        DLog(@"res : %d",res);
+
     }
+    
+    
     
     DLog(@"test finish");
 }

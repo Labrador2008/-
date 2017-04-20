@@ -12,11 +12,13 @@ unsigned char *epsilon;
 
 @implementation CalculatorMethod
 
+
 - (NSMutableDictionary *)allResDic
 {
     if (!_allResDic)
     {
         _allResDic = [[NSMutableDictionary alloc] init];
+        DLog(@"init all result Dic");
     }
     return _allResDic;
 }
@@ -639,6 +641,7 @@ unsigned char *epsilon;
 {
     BOOL isFinish = FALSE;
     
+    CalculatorMethod *myMethod = [CalculatorMethod sharedInstance];
     
     NSInteger testItemNum = [num integerValue];
     
@@ -651,8 +654,16 @@ unsigned char *epsilon;
         {
             return FALSE;
         }
-        [self.allResDic setObject:freRes forKey:@"FREQUENCY_TEST"];
-        DLog(@"res: %@",self.allResDic);
+        [myMethod.allResDic setObject:freRes forKey:@"FREQUENCY_TEST"];
+        DLog(@"res: %@",myMethod.allResDic);
+        
+        //判断结果是否大于0.01；
+        float resFre = [freRes floatValue];
+        if (resFre > 0.01)
+        {
+            DLog(@"Frequency pass");
+            myMethod.timeOfFrequencyTest++;
+        }
  
     }
     else if (testItemNum == BLOCKFREQUENCY_TEST)
@@ -664,8 +675,8 @@ unsigned char *epsilon;
         {
             return FALSE;
         }
-        [self.allResDic setObject:bloRes forKey:@"BLOCKFREQUENCY_TEST"];
-        DLog(@"res: %@",self.allResDic);
+        [myMethod.allResDic setObject:bloRes forKey:@"BLOCKFREQUENCY_TEST"];
+        DLog(@"res: %@",myMethod.allResDic);
     }
     else if(testItemNum == CUMULATIVESUM_TEST)
     {
@@ -676,11 +687,11 @@ unsigned char *epsilon;
         {
             return FALSE;
         }
-        [self.allResDic setObject:cusumAry forKey:@"CUMULATIVESUM_TEST"];
-        DLog(@"res: %@",self.allResDic);
+        [myMethod.allResDic setObject:cusumAry forKey:@"CUMULATIVESUM_TEST"];
+        DLog(@"res: %@",myMethod.allResDic);
         
     }
-    else if(testItemNum == RunsTest)
+    else if(testItemNum == RUNS_TEST)
     {
         DLog(@"RUNS_TEST");
         NSString *runsStr = [self _runsWithDataLength:PART_FILE_DATA_LENGTH];
@@ -688,8 +699,8 @@ unsigned char *epsilon;
         {
             return FALSE;
         }
-        [self.allResDic setObject:runsStr forKey:@"RUNS_TEST"];
-        DLog(@"res: %@",self.allResDic);
+        [myMethod.allResDic setObject:runsStr forKey:@"RUNS_TEST"];
+        DLog(@"res: %@",myMethod.allResDic);
     }
     
     else if(testItemNum == LONGERSRUN_TEST)
@@ -700,8 +711,8 @@ unsigned char *epsilon;
         {
             return FALSE;
         }
-        [self.allResDic setObject:longestRunRes forKey:@"LONGERSRUN_TEST"];
-        DLog(@"res: %@",self.allResDic);
+        [myMethod.allResDic setObject:longestRunRes forKey:@"LONGERSRUN_TEST"];
+        DLog(@"res: %@",myMethod.allResDic);
     }
     else if (testItemNum == SERIAL_TEST)
     {
@@ -712,8 +723,8 @@ unsigned char *epsilon;
         {
             return FALSE;
         }
-        [self.allResDic setObject:serialAry forKey:@"SERIAL_TEST"];
-        DLog(@"%@",self.allResDic);
+        [myMethod.allResDic setObject:serialAry forKey:@"SERIAL_TEST"];
+        DLog(@"%@",myMethod.allResDic);
     }
     else if (testItemNum == APPROXIMATEENTROPY_TEST)
     {
@@ -723,8 +734,8 @@ unsigned char *epsilon;
         {
             return FALSE;
         }
-        [self.allResDic setObject:appStr forKey:@"APPROXIMATEENTROPY_TEST"];
-        DLog(@"res: %@",self.allResDic);
+        [myMethod.allResDic setObject:appStr forKey:@"APPROXIMATEENTROPY_TEST"];
+        DLog(@"res: %@",myMethod.allResDic);
     }
     else if(testItemNum == UNIVERSALSTATICAL_TEST)
     {
@@ -734,8 +745,8 @@ unsigned char *epsilon;
         {
             return FALSE;
         }
-        [self.allResDic setObject:universalStr forKey:@"UNIVERSALSTATICAL_TEST"];
-        DLog(@"res : %@",self.allResDic);
+        [myMethod.allResDic setObject:universalStr forKey:@"UNIVERSALSTATICAL_TEST"];
+        DLog(@"res : %@",myMethod.allResDic);
     }
     else if (testItemNum == OVERLAPPINGTEMPLATEMATCHING_TEST)
     {
@@ -746,8 +757,8 @@ unsigned char *epsilon;
         {
             return FALSE;
         }
-        [self.allResDic setObject:overStr forKey:@"OVERLAPPINGTEMPLATEMATCHING_TEST"];
-        DLog(@"res : %@", self.allResDic);
+        [myMethod.allResDic setObject:overStr forKey:@"OVERLAPPINGTEMPLATEMATCHING_TEST"];
+        DLog(@"res : %@", myMethod.allResDic);
     }
     else if(testItemNum == NONOVERLAPPINGTEMPLATEMATCHING_TEST)
     {
@@ -838,6 +849,17 @@ Pr(int u, double eta)
         p = sum;
     }
     return p;
+}
+
++ (CalculatorMethod *)sharedInstance
+{
+    static dispatch_once_t onceToken;
+    static CalculatorMethod * sSharedInstance;
+    dispatch_once(&onceToken,^{
+        sSharedInstance = [[CalculatorMethod alloc] init];
+    });
+    return sSharedInstance;
+
 }
 
 
