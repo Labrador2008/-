@@ -51,21 +51,21 @@
     
 
     //设置item btn的tag；
-    self.FrequencyBtn.tag = 1;
-    self.BlockFrequencyBtn.tag = 2;
-    self.CumulativeSumsBtn.tag = 3;
-    self.RunsBtn.tag = 4;
-    self.LongestRunBtn.tag =5;
-    self.SerialBtn.tag = 6;
-    self.ApproximateEntropyBtn.tag = 7;
-    self.UniversalStaticalBtn.tag = 8;
-    self.OverlappingTemplateMatchingBtn.tag = 9;
-    self.NonOverlappingTemplateMatchingBtn.tag = 10;
-    self.RanksBtn.tag = 11;
-    self.LinearComplexityBtn.tag = 12;
-    self.RandomExcursionsBtn.tag = 13;
-    self.RandomExcursionVariantBtn.tag = 14;
-    self.DFTBtn.tag = 15;
+    self.FrequencyBtn.tag = FREQUENCY_TEST;
+    self.BlockFrequencyBtn.tag = BLOCKFREQUENCY_TEST;
+    self.CumulativeSumsBtn.tag = CUMULATIVESUM_TEST;
+    self.RunsBtn.tag = RUNS_TEST;
+    self.LongestRunBtn.tag =LONGERSRUN_TEST;
+    self.SerialBtn.tag = SERIAL_TEST;
+    self.ApproximateEntropyBtn.tag = APPROXIMATEENTROPY_TEST;
+    self.UniversalStaticalBtn.tag = UNIVERSALSTATICAL_TEST;
+    self.OverlappingTemplateMatchingBtn.tag = OVERLAPPINGTEMPLATEMATCHING_TEST;
+    self.NonOverlappingTemplateMatchingBtn.tag = NONOVERLAPPINGTEMPLATEMATCHING_TEST;
+    self.RanksBtn.tag = RANKS_TEST;
+    self.LinearComplexityBtn.tag = LINEARCOMPLEXITY_TEST;
+    self.RandomExcursionsBtn.tag = RANDOMEXCURSIONS_TEST;
+    self.RandomExcursionVariantBtn.tag = RANDOMEXCURSIONVARIANT_TEST;
+    self.DFTBtn.tag = DFT_TEST;
     
     //设置全选按钮点击的次数，从0开始；
     clickSelecteAllBtnTime = 0;
@@ -143,22 +143,19 @@
     {
         DLog(@"test item wrong");
         //弹窗
+        return;
     }
     
     self.testFileURL = self.dragFilePathControl.URL;
     
-    DLog(@"test file URL : %@", self.testFileURL);
-    
-    //判断待测试文件路径是否正确
-    if (!self.testFileURL)
-    {
-        DLog(@"test file path wrong");
-        //弹窗
-    }
-    
+        
+   
     //依次计算每段的数据的随机性
     //FILE_PART_COUNT
-    for (int n = 0; n < 1; n++)
+    
+    CalculatorMethod * method = [CalculatorMethod sharedInstance];
+    method.allResDic = [[NSMutableDictionary alloc] initWithCapacity:(FILE_PART_COUNT * self.selectedItemAry.count)];
+    for (int n = 0; n < 2; n++)
     {
     
         //获取第n段要测试的数据
@@ -169,14 +166,17 @@
         {
             DLog(@"test data wrong");
             //弹窗
+            return;
         }
         
+        //epsilon = (unsigned char *)[mTestData bytes];
         //循环测试 测试条目数组 中的所有内容
         for (int i = 0; i < self.selectedItemAry.count; i++)
         {
             //获取数组中的条目
             NSNumber *mTestItemNum = [self.selectedItemAry objectAtIndex:i];
-            BOOL isOK = [CalculatorMethod startCalculatorWithData:mTestData andItmeNum:mTestItemNum];
+            CalculatorMethod *test = [[CalculatorMethod alloc] init];
+            BOOL isOK = [test startCalculatorWithData:mTestData andItemNum:mTestItemNum];
             
             if (isOK)
             {
@@ -189,15 +189,22 @@
             
             //更新显示的状态栏
             dispatch_async(dispatch_get_main_queue(), ^{
-                self.stateLabel.stringValue = [NSString stringWithFormat:@"第%d个数据块，第%d个测试条目", n, i+1];
+                self.stateLabel.stringValue = [NSString stringWithFormat:@"第%d个数据块，第%d个测试条目", n+1, i+1];
                 
              
                 
                 
             });
         }
-    
+        
+        free(epsilon);
+        NSString *resPathStr = [NSString stringWithFormat:@"/Users/LBLD/Desktop/tmp/res_%d.plist",n+1];
+        int res = [method.allResDic writeToFile:resPathStr atomically:YES];
+        DLog(@"res : %d",res);
+
     }
+    
+    
     
     DLog(@"test finish");
 }

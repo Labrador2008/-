@@ -11,13 +11,30 @@
 
 #import "FileMethod.h"
 #import "CalculatorMethod.h"
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+#include <stdlib.h>
+#include "externs.h"
+#include "utilities.h"
+#include "cephes.h"
 
 
 #pragma mark - Foundation
 //单次测试传入的数据长度
-#define PART_FILE_DATA_LENGTH (1000000 / 8)
+#define PART_FILE_DATA_LENGTH 1000000
 //一个待测文件截取的段数
 #define FILE_PART_COUNT 10
+
+//基本参数
+#define BLOCKFREQUENCYBLOCKLENGTH          20000
+#define NONOVERLAPPINGTEMPLATEBLOCKLENGTH  9
+#define OVERLAPPINGTEMPLATEBLOCKLENGTH     9
+#define APPROXIMATEENTROPYBLOCKLENGTH      10
+#define SERIALBLOCKLENGTH                  16
+#define LINEARCOMPLEXITYSEQUENCELENGTH     500
+
+
 
 
 
@@ -54,5 +71,25 @@ typedef NS_ENUM(NSInteger, TestItem)
     RandomExcursionsVariantTest,                    //随机游动状态频数测试
     
 };
+
+#define FREQUENCY_TEST                  1
+#define BLOCKFREQUENCY_TEST             2
+#define CUMULATIVESUM_TEST              3
+#define RUNS_TEST                       4
+#define LONGERSRUN_TEST                 5
+#define SERIAL_TEST                     6
+#define APPROXIMATEENTROPY_TEST         7
+#define UNIVERSALSTATICAL_TEST          8
+#define OVERLAPPINGTEMPLATEMATCHING_TEST    9
+#define NONOVERLAPPINGTEMPLATEMATCHING_TEST 10
+#define RANKS_TEST                          11
+#define LINEARCOMPLEXITY_TEST               12
+#define RANDOMEXCURSIONS_TEST               13
+#define DFT_TEST                            14  
+#define RANDOMEXCURSIONVARIANT_TEST         15
+
+
+//数据
+extern unsigned char *epsilon;
 
 #endif /* Global_h */
